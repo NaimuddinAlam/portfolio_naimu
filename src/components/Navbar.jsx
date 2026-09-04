@@ -56,12 +56,12 @@ const Navbar = () => {
 
   return (
     <div className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 bottom-6 sm:bottom-auto sm:top-6 z-[100] transition-transform duration-700 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}>
-      <nav className="relative flex items-center gap-4 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-5 h-[60px] backdrop-blur-xl shadow-2xl">
+      <nav className="relative flex items-center gap-8 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-6 h-[60px] backdrop-blur-xl shadow-2xl">
         
         {/* The smooth sliding dynamic color indicator */}
         <div 
           className="absolute top-0 w-8 h-full pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-          style={{ left: `calc(1.25rem + ${activeIndex * 3}rem)` }}
+          style={{ left: `calc(1.5rem + ${activeIndex * 4}rem)` }}
           id="nav-indicator"
         >
           <div 
