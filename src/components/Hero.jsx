@@ -132,7 +132,7 @@ const Hero = ({ data }) => {
             playsInline 
             muted={muted}
             preload="auto" 
-            className={`absolute inset-0 h-full w-full object-contain md:object-cover opacity-90 transition-opacity duration-700 ${paused ? 'opacity-50 grayscale blur-sm' : ''}`}
+            className={`absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity duration-700 ${paused ? 'opacity-50 grayscale blur-sm' : ''}`}
           >
             <source src={data.video} type="video/mp4" />
           </video>
