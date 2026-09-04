@@ -125,6 +125,7 @@ const Navbar = () => {
         })}
     </nav>
     </motion.div>
+    </div>
     </>
   );
 };
