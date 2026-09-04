@@ -64,8 +64,9 @@ const Navbar = () => {
       <motion.div 
         drag
         dragConstraints={dragConstraintsRef}
-        dragElastic={0.1}
-        className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 top-6 z-[100] cursor-grab active:cursor-grabbing transition-transform duration-700 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}
+        dragElastic={0}
+        dragMomentum={false}
+        className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 top-6 z-[100] cursor-grab active:cursor-grabbing`}
       >
         <nav className="relative flex items-center gap-8 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-6 h-[60px] backdrop-blur-xl shadow-2xl pointer-events-auto">
         
