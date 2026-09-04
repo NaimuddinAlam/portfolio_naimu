@@ -59,16 +59,18 @@ const Navbar = () => {
   return (
     <>
       {/* Invisible container for drag bounds so it doesn't leave the screen */}
-      <div ref={dragConstraintsRef} className="fixed inset-0 z-0 pointer-events-none" />
+      <div ref={dragConstraintsRef} className="fixed inset-4 z-0 pointer-events-none" />
       
-      <motion.div 
-        drag
-        dragConstraints={dragConstraintsRef}
-        dragElastic={0}
-        dragMomentum={false}
-        className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 top-6 z-[100] cursor-grab active:cursor-grabbing`}
-      >
-        <nav className="relative flex items-center gap-8 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-6 h-[60px] backdrop-blur-xl shadow-2xl pointer-events-auto">
+      {/* Centering wrapper that doesn't use translate, allowing framer-motion constraints to work properly */}
+      <div className="fixed top-6 left-0 right-0 sm:left-auto sm:right-8 md:right-12 z-[100] flex justify-center pointer-events-none">
+        <motion.div 
+          drag
+          dragConstraints={dragConstraintsRef}
+          dragElastic={0}
+          dragMomentum={false}
+          className="cursor-grab active:cursor-grabbing pointer-events-auto"
+        >
+          <nav className="relative flex items-center gap-8 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-6 h-[60px] backdrop-blur-xl shadow-2xl pointer-events-auto">
         
         {/* The smooth sliding dynamic color indicator */}
         <div 
