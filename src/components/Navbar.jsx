@@ -55,7 +55,7 @@ const Navbar = () => {
   if (activeIndex === -1) activeIndex = 0;
 
   return (
-    <div className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 bottom-6 sm:bottom-auto sm:top-6 z-[100] transition-transform duration-700 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}>
+    <div className={`fixed left-1/2 -translate-x-1/2 sm:left-auto sm:transform-none sm:right-8 md:right-12 top-6 z-[100] transition-transform duration-700 ${scrolled ? 'translate-y-0' : 'translate-y-2'}`}>
       <nav className="relative flex items-center gap-8 rounded-2xl border border-[#2a2a35] bg-[#16161e]/90 px-6 h-[60px] backdrop-blur-xl shadow-2xl">
         
         {/* The smooth sliding dynamic color indicator */}
